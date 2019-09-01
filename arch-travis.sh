@@ -56,7 +56,7 @@ mapfile -t envs < <(ruby -e 'ENV.each {|key,_| if not ["PATH","USER","HOME","GOR
 eval docker run --rm \
     -v "$(pwd):/build" \
     "${CONFIG_VOLUMES[@]}" \
-    --privileged
+    --privileged \
     -e "CC=$CC" \
     -e "CXX=$CXX" \
     -e CONFIG_BEFORE_INSTALL="$CONFIG_BEFORE_INSTALL" \
