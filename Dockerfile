@@ -1,6 +1,5 @@
 # Build Archlinux packages with drone
 #
-#     docker build --rm=true -t mikkeloscar/arch-travis .
 
 FROM archlinux/base:latest
 MAINTAINER Catergos team xeon zolt <catergos@yogdaan.org>
