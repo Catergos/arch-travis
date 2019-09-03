@@ -3,7 +3,7 @@
 #     docker build --rm=true -t mikkeloscar/arch-travis .
 
 FROM archlinux/base:latest
-MAINTAINER Mikkel Oscar Lyderik Larsen <m@moscar.net>
+MAINTAINER Catergos team xeon zolt <catergos@yogdaan.org>
 
 # Setup build user/group
 ENV UGID='2000' UGNAME='travis'
@@ -24,6 +24,7 @@ RUN \
         base-devel \
         git \
         reflector \
+        archiso \
         --noconfirm && \
     # Clean .pacnew files
     find / -name "*.pacnew" -exec rename .pacnew '' '{}' \;
