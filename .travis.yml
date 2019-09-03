@@ -35,7 +35,7 @@ arch:
 
 script:
 # build new image
-- docker build --rm=true -t catergos/arch-travis:latest .
+- docker build --rm=true -t catergos/arch-travis:iso .
 # run arch-travis to test new image
 - bash ./arch-travis.sh
 - ls -l
@@ -47,5 +47,5 @@ jobs:
     if: branch = master AND type != pull_request
     script:
     - docker login -u $DOCKER_USER -p $DOCKER_PASS
-    - docker build --rm=true -t catergos/arch-travis:latest .
-    - docker push catergos/arch-travis:latest
+    - docker build --rm=true -t catergos/arch-travis:iso .
+    - docker push catergos/arch-travis:iso

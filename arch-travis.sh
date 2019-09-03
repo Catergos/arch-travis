@@ -64,4 +64,4 @@ eval docker run --rm \
     -e CONFIG_PACKAGES="$CONFIG_PACKAGES" \
     -e CONFIG_REPOS="$CONFIG_REPOS" \
     "${envs[@]}" \
-    catergos/arch-travis:latest
+    catergos/arch-travis:iso
